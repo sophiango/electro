@@ -15,6 +15,10 @@ class FeederResponse(BaseModel):
     last_update_on_map: Optional[datetime]
     geometry_x: Optional[float]
     geometry_y: Optional[float]
+    embedding: Optional[str]
 
     class Config:
         from_attributes = True  # <-- SQLAlchemy 2.x compatible
+
+class QueryRequest(BaseModel):
+    query: str

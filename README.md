@@ -84,10 +84,11 @@ pip install -r requirements.txt
 python -m uvicorn app.main:app --reload
 ```
 
-Open in browser
+Open in browser. FastAPI swagger will appear
+
 ```http://127.0.0.1:8000/docs```
-FastAPI’s interactive Swagger UI will appear.
+
 ---
 
-### License
+## License
 MIT

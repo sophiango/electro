@@ -20,3 +20,4 @@ class Feeder(Base):
     geometry_x = Column(Float)
     geometry_y = Column(Float)
     updated_at = Column(DateTime, default=datetime.datetime.utcnow)
+    embedding = Column(Text, nullable=True)
