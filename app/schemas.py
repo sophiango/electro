@@ -22,3 +22,8 @@ class FeederResponse(BaseModel):
 
 class QueryRequest(BaseModel):
     query: str
+
+class FeedbackRequest(BaseModel):
+    query_text: str
+    feeder_id: int
+    rating: Optional[int] = None

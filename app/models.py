@@ -21,3 +21,13 @@ class Feeder(Base):
     geometry_y = Column(Float)
     updated_at = Column(DateTime, default=datetime.datetime.utcnow)
     embedding = Column(Text, nullable=True)
+
+class Feedback(Base):
+    __tablename__ = "feedback"
+
+    id = Column(Integer, primary_key=True, index=True)
+    query_text = Column(String, nullable=False)
+    feeder_id = Column(Integer, nullable=False)
+    rating = Column(Integer, nullable=True)  # 1–5
+    created_at = Column(DateTime, default=datetime.datetime.utcnow)
+
